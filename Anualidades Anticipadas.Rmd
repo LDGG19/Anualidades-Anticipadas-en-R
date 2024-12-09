@@ -1,0 +1,158 @@
+---
+title: "Anualidades Anticipadas"
+output: html_document
+date: "2024-12-08"
+---
+
+#Ejercicios
+
+#Ejercicio 1:
+
+Un individuo deposita $900 al inicio de cada mes en una cuenta que paga una tasa del 5% anual, compuesta mensualmente, durante 7 años. ¿Cuál será el valor futuro de la anualidad anticipada al término del plazo?
+
+Fórmula empleada: $VA=A*((((1+r)^t)-1)/r)*(1+r)$
+
+```{r}
+A=900
+i=0.05
+r=i/12
+t=7*12
+
+VA=VA=A*((((1+r)^t)-1)/r)*(1+r)
+VA
+```
+
+#Ejercicio 2:
+
+Un empresario realiza pagos quincenales de $1,500 al inicio de cada quincena en una inversión que ofrece una tasa de interés del 6% anual, compuesta quincenalmente, durante 6 años. ¿Cuál es el valor futuro de esta anualidad anticipada?
+
+Fórmula empleada: $VA=A*((((1+r)^t)-1)/r)*(1+r)$
+
+```{r}
+A=1500
+i=0.06
+r=i/24
+t=(6*24)
+
+VA=VA=A*((((1+r)^t)-1)/r)*(1+r)
+VA
+```
+#Ejercicio 3:
+
+Una persona realiza depósitos mensuales de $1,200 al inicio de cada mes en una cuenta que ofrece una tasa de interés del 4% anual, compuesta mensualmente, durante 10 años. ¿Cuál será el valor futuro al término del plazo bajo esta anualidad anticipada?
+
+Fórmula empleada: $VA=A*((((1+r)^t)-1)/r)*(1+r)$
+
+```{r}
+A=1200
+i=0.04
+r=i/12
+t=(10*12)
+
+VA=VA=A*((((1+r)^t)-1)/r)*(1+r)
+VA
+```
+#Ejercicio 4:
+
+Una persona desea acumular $80,000 dentro de 5 años realizando pagos quincenales al inicio de cada quincena en una inversión con una tasa del 6% anual, compuesta quincenalmente. ¿Cuánto debe pagar cada quincena bajo una anualidad anticipada?
+
+Fórmula empleada: $A=(VF)/(((((1+r)^t)-1)/r)*(1+r))$
+
+```{r}
+VF=80000
+i=0.06
+r=i/24
+t=(5*24)
+
+A=(VF)/(((((1+r)^t)-1)/r)*(1+r))
+A
+```
+#Ejercicio 5:
+
+Una empresa desea tener $400,000 dentro de 12 años, realizando depósitos mensuales al inicio de cada mes en una cuenta que paga una tasa del 3.5% anual, compuesta mensualmente. ¿Cuánto deberá ser el pago mensual bajo una anualidad anticipada?
+
+Fórmula empleada: $A=(VF)/(((((1+r)^t)-1)/r)*(1+r))$
+
+```{r}
+VF=400000
+i=0.035
+r=i/12
+t=(12*12)
+
+A=(VF)/(((((1+r)^t)-1)/r)*(1+r))
+A
+```
+#Ejercicio 6:
+
+Una persona planea reunir $250,000 en 8 años mediante pagos quincenales al inicio de cada quincena en una cuenta que ofrece una tasa del 4.5% anual, compuesta quincenalmente. ¿Cuánto debe pagar cada quincena en esta anualidad anticipada?
+
+Fórmula empleada: $A=(VF)/(((((1+r)^t)-1)/r)*(1+r))$
+
+```{r}
+VF=250000
+i=0.045
+r=i/24
+t=(8*24)
+
+A=(VF)/(((((1+r)^t)-1)/r)*(1+r))
+A
+```
+#Ejercicio 7:
+
+Un inversionista realiza pagos quincenales de $700 al inicio de cada quincena en una cuenta con una tasa de interés del 5% anual, compuesta quincenalmente. Si quiere acumular $60,000, ¿cuántas quincenas deberá realizar los pagos bajo una anualidad anticipada?
+
+Fórmula empleada: $t=log((((VF*r)/A*(1+r))+1))/log(1+r)$
+
+```{r}
+VF=60000
+A=700
+i=0.05
+r=i/24
+
+t=log((((VF*r)/A*(1+r))+1))/log(1+r)
+t
+```
+#Ejercicio 8:
+
+Un individuo realiza pagos mensuales de $1,000 al inicio de cada mes en una cuenta que ofrece una tasa de interés del 3.8% anual, compuesta mensualmente. Si desea alcanzar $120,000, ¿cuántos meses debe realizar estos pagos bajo una anualidad anticipada?
+
+Fórmula empleada: $t=log((((VF*r)/A*(1+r))+1))/log(1+r)$
+
+```{r}
+VF=120000
+A=1000
+i=0.038
+r=i/12
+
+t=log((((VF*r)/A*(1+r))+1))/log(1+r)
+t
+```
+#Ejercicio 9:
+
+Se realizan pagos quincenales de $500 al inicio de cada quincena en una cuenta de ahorro durante 4 años bajo una anualidad anticipada. Si al final del plazo se acumulan $55,000, ¿cuál es la tasa de interés anual compuesta quincenalmente?
+
+Fórmula empleada: $r=(((VF/(A*(1+r)))+1)^(1/t))-1)$
+
+```{r}
+VF=55000
+A=500
+t=4*24
+
+r=(((VF/(A*(1+r)))+1)^(1/t))-1
+r
+```
+#Ejercicio 10:
+
+Una persona realiza pagos mensuales de $2,000 al inicio de cada mes durante 5 años bajo una anualidad anticipada. Si al final se acumula un valor futuro de $140,000, ¿cuál es la tasa de interés anual compuesta mensualmente?
+
+Fórmula empleada: $r=(((VF/(A*(1+r)))+1)^(1/t))-1)$
+
+```{r}
+VF=140000
+A=2000
+t=5*12
+
+r=(((VF/(A*(1+r)))+1)^(1/t))-1
+r
+```
+
